@@ -1,2 +1,4 @@
 venv/
 __pycache__/
+main.py
+data/dataset_cleaned.csv

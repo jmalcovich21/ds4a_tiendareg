@@ -13,7 +13,7 @@ external_stylesheets = [
     },
 ]
 
-dash_app_ds4a = Dash(__name__, requests_pathname_prefix='/tiendareg/', external_stylesheets=[dbc.themes.BOOTSTRAP],
+dash_app_ds4a = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
            meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}])
 dash_app_ds4a.title = "TR Analytics Dashboard"
 
@@ -230,5 +230,5 @@ def update_charts(region, avocado_type, start_date, end_date):
     return price_chart_figure, volume_chart_figure
 
 
-#if __name__ == "__main__":
-#    app.run_server(debug=True)
+if __name__ == "__main__":
+    dash_app_ds4a.run_server(debug=False)
