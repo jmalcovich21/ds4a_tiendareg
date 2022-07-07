@@ -130,8 +130,8 @@ slider = dcc.Slider(0, 1,
                     id='my-slider',
                     step=None,
                     marks={
-                        0: 'PORTFOLIO',
-                        1: 'SALES MAP',
+                        0: 'SALES MAP',
+                        1: 'PORTFOLIO',
                     },
                     value=0,
 )

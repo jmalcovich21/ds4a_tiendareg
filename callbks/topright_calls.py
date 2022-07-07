@@ -22,7 +22,7 @@ def topright_callbacks(app, data, df_barrios):
         if select_product is None or select_marca is None or select_ciudad is None or select_zona is None or n_clicks == 0:
             raise PreventUpdate
         else:
-            if slider_pos == 0:
+            if slider_pos == 1:
                 df_treemap = get_portfolio_model(select_product, select_marca, select_ciudad, select_zona)
                 # Create the graph that will show the top 5 product for the filtered brand
                 fig = px.treemap(df_treemap, path=["DescripcionLargaProducto", "Estrato2"], values="Median",
@@ -37,7 +37,7 @@ def topright_callbacks(app, data, df_barrios):
                                   )
                 )
 
-            elif slider_pos == 1:
+            elif slider_pos == 0:
                 df_filter = data.loc[(data['NombreDeProductor'] == select_product) &
                                      (data['marca'] == select_marca) &
                                      (data['Municipio'] == select_ciudad) &
